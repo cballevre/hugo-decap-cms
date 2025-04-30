@@ -8,5 +8,13 @@
   </head>
   <body>
     <h1>Nice. It's looking good already.</h1>
+    <h2>Recent Posts</h2>
+    <ul>
+      {{ range where site.RegularPages "Section" "blog" }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+      {{ end }}
+    </ul>
   </body>
 </html>
