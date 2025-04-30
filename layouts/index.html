@@ -16,5 +16,13 @@
       </li>
       {{ end }}
     </ul>
+    <h2>Activités</h2>
+    <ul>
+      {{ range where site.RegularPages "Section" "activity" }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+      {{ end }}
+    </ul>
   </body>
 </html>
